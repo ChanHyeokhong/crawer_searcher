@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+
+<html>
+<meta charset="utf-8" />
+<title>검색값</title>
+<head>
+    <div class="page-header">
+        <center>
+            <h1><a href="/">검색</a></h1>
+        </center>
+    </div>
+</head>
+<body>
+  <div class="row">
+      <div style="float: none; margin: 0 auto" class="col-5 border border-secondary">
+          <div class="row">
+                    {% if gil > 0 and data_list %}
+                    <div class="box_font">
+                        결과값 <br>
+                        <textarea name = "result" rows = "30" cols = "180">{{ data_list }}</textarea><br>
+                    <button type="button" onclick="location.href='/'">돌아가기</button>
+                    </div>
+                </div>
+                        {% elif gil == 0 %}
+                        <div>
+                            <h1>입력된 문자가 없습니다.</h1>
+                            <button type="button" onclick="location.href='/'">돌아가기</button>
+                </div>
+                        {% else %}
+                        <div>
+                            <h1>검색어가 없습니다..</h1>
+                            <button type="button" onclick="location.href='/'">돌아가기</button>
+                </div>
+                {% endif %}
+            </div>
+  </div>
+</body>
+</html>
